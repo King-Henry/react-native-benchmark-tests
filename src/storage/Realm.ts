@@ -61,7 +61,6 @@ export function getFromRealm(): Command[] {
   createAndSaveCommand()
   let filteredCommands: Command[] = realm.objects<Command>('Command')
           .filter( (command: Command) => command.actionType === singleCommand.type)
-  realm._objectForObjectKey()
   // console.log(JSON.stringify(filteredCommands));
   return filteredCommands
 }
